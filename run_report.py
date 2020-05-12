@@ -1,7 +1,10 @@
 # coding:utf-8
+import sys
+sys.path.append(r'F:\daima\unittestapi\common_utils')#解决 windows命令行执行报错 no module funtion，
+import os
 import unittest
 from HTMLTestReportCN import *
-import time, os
+import time
 from function import *
 
 #获取当前脚本路径
