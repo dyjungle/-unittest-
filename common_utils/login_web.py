@@ -10,8 +10,8 @@ class Login():
     def login_userpsd():
         url = 'http://www.51zxw.net/login'
         data = {
-            'loginStr': '15928037997',
-            'pwd': 'Dy337371811',
+            'loginStr': '159*****997',
+            'pwd': '**********',
             '__RequestVerificationToken': '',
             'isRememberlogin': 'false'
         }
