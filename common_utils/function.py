@@ -31,12 +31,12 @@ def send_mail(latest_report):
 
     smtpserver = 'smtp.163.com'
 
-    user = 'dengyi_cuit@163.com'
+    user = '*******@163.com'
     # 根据自己邮箱密码来设置
-    password = 'OAJXBBUIYOXRDABN'
+    password = '********'
 
-    sender = 'dengyi_cuit@163.com'
-    receives = ['337371811@qq.com']
+    sender = '*****@163.com'
+    receives = ['*****@qq.com']
 
     subject = 'Web Selenium 自动化测试报告'
 
