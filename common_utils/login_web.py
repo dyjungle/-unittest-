@@ -12,8 +12,8 @@ class Login():
         po = BaseData()
         url = po.get_51url() + '/login'
         data = {
-            'loginStr': '15928037997',
-            'pwd': 'Dy337371811',
+            'loginStr': '159*****997',
+            'pwd': '**********',
             '__RequestVerificationToken': '',
             'isRememberlogin': 'false'
         }
