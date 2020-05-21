@@ -17,7 +17,7 @@ def insert_img(driver,filename):
     base_dir = base_dir.replace('\\', '/')
     #print(base_dir)
 
-    base=base_dir.split('/Website')[0]
+    base = base_dir.split('/Website')[0]
 
     # print(base)
     filepath=base+'/Website/test_report/screenshot/'+filename

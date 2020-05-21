@@ -9,8 +9,10 @@ class Test(unittest.TestCase):
     """验证http://www.httpbin.org/get接口"""
     @classmethod
     def setUpClass(cls):
+        #实例化对象
         po = BaseData()
-        cls.url = po.get_ip() + "/get"
+        #获取配置文件中的httpbinurl 并拼接get 作为新url
+        cls.url = po.get_httpbinurl() + "/get"
 
     @classmethod
     def tearDownClass(cls):

@@ -2,13 +2,15 @@
 import requests
 #通过request模块导入cookiejar 方法,主要功能是对接收下来的cookie进行存储
 from requests.cookies import RequestsCookieJar
+from base_data import BaseData
 
 
 class Login():
     @staticmethod
     #输入密码、用户名等信息，通过post请求登录，返回response
     def login_userpsd():
-        url = 'http://www.51zxw.net/login'
+        po = BaseData()
+        url = po.get_51url() + '/login'
         data = {
             'loginStr': '15928037997',
             'pwd': 'Dy337371811',

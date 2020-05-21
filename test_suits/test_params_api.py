@@ -3,10 +3,13 @@ import unittest
 import json
 # import randon
 import requests
+from base_data import BaseData
+
 #接口间参数传递
 class Modulelist(unittest.TestCase):
     def setUp(self):
-        self.url = 'http://www.httpbin.org'
+        po = BaseData()
+        self.url = po.get_httpbinurl()
         self.header = {
             "Accept": "application/json",
             "Accept-Encoding": "gzip, deflate",
@@ -20,7 +23,7 @@ class Modulelist(unittest.TestCase):
           }
     #获取菜单中所有标签数据，也就是接口返回数据
     def get_all_label(self):
-        url = 'http://www.httpbin.org/get'
+        url = self.url + '/get'
         data = {
             "username": "dengyi",
             "password": "111111",
@@ -67,7 +70,7 @@ class Modulelist(unittest.TestCase):
             raise e
     #新增草稿，将获取到的参数添加到草稿
     def add_draft(self, username, password):
-       url = "http://www.httpbin.org/post"
+       url = self.url + '/post'
        data = {
             "username": username,
             "password": password,

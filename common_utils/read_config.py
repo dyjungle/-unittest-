@@ -13,17 +13,24 @@ class ReadConfig:
             configpath1 = os.path.join(root_dir1, "config.ini")  # 拼接路径，得到配置文件路径
             # print(root_dir1)
 
-            # root_dir = os.path.dirname(os.path.abspath('.')) # 获取当前脚本所在目录的上一级目录
-            # configpath = os.path.join(root_dir, "common_utils/config.ini") # 拼接路径
-            # print(root_dir)
-
         self.cf = configparser.ConfigParser()#实例化对象
         self.cf.read(configpath1)#读取配置文件
 
-    def get_host(self, param):
-        value = self.cf.get("URL", param)#获取配置文件中URL中的值，赋值给value
-        return value
+    def get_ip(self, param):
+        ip = self.cf.get("IP", param)#获取配置文件中URL中的值，赋值给value
+        return ip
 
+    def get_51url(self, param):
+        url = self.cf.get("51_URL", param)#获取配置文件中URL中的值，赋值给value
+        return url
+
+    def get_httpbinurl(self, param):
+        url = self.cf.get("HTTPBIN_URL", param)#获取配置文件中URL中的值，赋值给value
+        return url
+
+    def get_port(self, param):
+        port = self.cf.get("PORT", param)#获取配置文件中URL中的值，赋值给value
+        return port
 
 base_url = ReadConfig()
 

@@ -1,5 +1,6 @@
 # coding:utf-8
 import requests
+from bs4 import BeautifulSoup
 import json
 from requests.exceptions import RequestException
 from common_utils.login_web import Login
@@ -44,9 +45,15 @@ class Runmain:
 if __name__ == '__main__':
     url = 'https://www.51zxw.net'
     t = Runmain()
+
     print(t.run_main("GET", url))
     print(t.run_main("GET", url))
     r = t.run_main("GET", url)
-    res = r.text
-    print(res)
+    res = json.dumps(r.text, indent=2, ensure_ascii=False)
+    # print(res)
+    soup = BeautifulSoup(r.text, "lxml")
+    # print(soup.prettify())
+    print(soup.select('.zy')[0].get_text())
+
+
 
